@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 
-def call(String url) {
+def call(String webhookurl) {
   sh """
       set +x;
       curl -X POST -H 'Content-type: application/json' --data '{
@@ -16,6 +16,6 @@ def call(String url) {
             "color": "#006400"
           }
         ]
-      }' ${url}
+      }' ${webhookurl}
   """
 }
