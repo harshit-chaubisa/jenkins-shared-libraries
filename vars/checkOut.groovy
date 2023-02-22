@@ -1,3 +1,4 @@
-def call(String URL_ID){
-    checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: ${URL_ID}]])
+def call(){
+    String harshit = evaluate('url')
+    checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: harshit]])
 }
