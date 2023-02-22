@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 
-def call() {
+def SlackSendWebhook(String url) {
   sh """
       set +x;
       curl -X POST -H 'Content-type: application/json' --data '{
@@ -16,6 +16,6 @@ def call() {
             "color": "#006400"
           }
         ]
-      }' https://hooks.slack.com/services/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
+      }' ${url}
   """
 }
