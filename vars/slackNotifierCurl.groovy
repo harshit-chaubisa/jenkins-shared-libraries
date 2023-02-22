@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 
-def SlackSendWebhook(String url) {
+def call(String url) {
   sh """
       set +x;
       curl -X POST -H 'Content-type: application/json' --data '{
