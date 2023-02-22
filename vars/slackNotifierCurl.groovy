@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 
-def call(String urlid, String BUILD_TRIGGER_BY) {
+def call(String urlid, String BUILD_TRIGGER_BY, String url) {
   sh """
       set +x;
       curl -X POST -H 'Content-type: application/json' --data '{
